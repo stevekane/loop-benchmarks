@@ -38,7 +38,7 @@ iter.add('for', { setup: setup, fn: forLoop })
 iter.add('while', { setup: setup, fn: whileLoop })
 iter.on('cycle', function (event) {
 	console.log(event.target.options.fn.toString())
-  console.log(String(event.target))
+	console.log(String(event.target))
 })
 iter.on('complete', function () {
   console.log('FASTEST OPTIONS:', this.filter('fastest').map('name'))
